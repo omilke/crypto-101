@@ -11,7 +11,7 @@ public class Password {
         this.hashedPassword = hashPassword(plainPassword);
     }
 
-    public boolean matches(String plainPassword){
+    public boolean matches(String plainPassword) {
 
         return BCrypt.checkpw(plainPassword, hashedPassword);
     }
